@@ -1,0 +1,21 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "serve": "firebase emulators:start --only functions,hosting",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^4.4.0",
+    "mongoose": "^8.18.1",
+    "dotenv": "^17.2.2"
+  }
+}

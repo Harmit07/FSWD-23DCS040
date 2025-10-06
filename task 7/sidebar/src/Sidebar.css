@@ -1,0 +1,121 @@
+/* Sidebar Container */
+.sidebar {
+  width: 270px;
+  background: linear-gradient(135deg, #23243a 60%, #3f51b5 100%);
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  left: -270px;
+  top: 0;
+  transition: left 0.35s cubic-bezier(.77,0,.18,1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1200;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.18);
+}
+
+/* Open State */
+.sidebar.open {
+  left: 0;
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 22px 18px 22px;
+  background: linear-gradient(to right, #3f51b5, #1e88e5);
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sidebar-logo img {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  object-fit: cover;
+  background: #fff;
+}
+.sidebar-logo span {
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* Close Button */
+.close-button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  line-height: 1;
+  padding: 0 6px;
+}
+.close-button:hover {
+  transform: scale(1.18) rotate(8deg);
+  color: #ffd600;
+}
+
+/* Links */
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 0 0;
+  flex-grow: 1;
+  gap: 8px;
+}
+
+.sidebar-links a {
+  color: #fff;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 8px 0 0 8px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-links a:hover,
+.sidebar-links a:focus {
+  background: rgba(255,255,255,0.09);
+  color: #ffd600;
+  transform: translateX(8px) scale(1.04);
+}
+
+/* Footer */
+.sidebar-footer {
+  padding: 18px 0 18px 0;
+  text-align: center;
+  font-size: 0.98rem;
+  background: #23243a;
+  border-top: 1px solid #3f51b5;
+  color: #bdbdbd;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .sidebar {
+    width: 90vw;
+    left: -90vw;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+}

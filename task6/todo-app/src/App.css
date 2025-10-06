@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #afafeb, #672bd6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.container {
+  background: linear-gradient(to right, #8959ea, #6803f5);
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.todo-box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.input-group button {
+  padding: 10px;
+  background-color: #4a0df0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6a5acd;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.task input.edit-input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.task .button-group button {
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.voice-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.voice-controls button {
+  padding: 8px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #94ca8b, #0ce730);
+  color: black;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}

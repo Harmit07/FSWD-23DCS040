@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Portal - Profile</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>👤 Welcome to Your Profile</h2>
+    <div class="session-info">
+      <p><strong>Name:</strong> <span id="name"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Login Time:</strong> <span id="loginTime"></span></p>
+      <p><strong>Session Status:</strong> <span class="active-session">Active</span></p>
+    </div>
+    
+    <div class="actions">
+      <a class="logout" href="/logout" onclick="return confirmLogout()">Logout</a>
+      <a class="activity-btn" href="#" onclick="showActivity()">View Activity Log</a>
+    </div>
+    
+    <div id="activity-log" style="display: none;">
+      <h3>Recent Activity</h3>
+      <div id="activity-content"></div>
+    </div>
+  </div>
+
+  <script>
+    
+    fetch("/profile-data")
+      .then(res => {
+        if (!res.ok) {
+          window.location.href = "/";
+          return;
+        }
+        return res.json();
+      })
+      .then(data => {
+        if (data) {
+          document.getElementById("name").innerText = data.name;
+          document.getElementById("email").innerText = data.email;
+          document.getElementById("loginTime").innerText = data.loginTime;
+        }
+      })
+      .catch(err => {
+        console.error("Error fetching profile data:", err);
+        window.location.href = "/";
+      });
+
+    function confirmLogout() {
+      return confirm("Are you sure you want to logout?");
+    }
+
+    function showActivity() {
+      const activityLog = document.getElementById("activity-log");
+      if (activityLog.style.display === "none") {
+        fetch("/activity")
+          .then(res => res.json())
+          .then(data => {
+            const content = document.getElementById("activity-content");
+            content.innerHTML = data.map(log => 
+              `<p><strong>${log.action.toUpperCase()}</strong> - ${log.email} at ${log.time}</p>`
+            ).join("");
+            activityLog.style.display = "block";
+          });
+      } else {
+        activityLog.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

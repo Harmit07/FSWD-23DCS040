@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Voting System</title>
+    <link rel="stylesheet" href="prac1.css">
+</head>
+<body>
+    <div class="poll-container">
+        <h1>Vote for Your Favorite Language</h1>
+        <div class="button-row">
+            <button class="vote-button" onclick="vote('JavaScript')">JavaScript</button>
+            <button class="vote-button" onclick="vote('Python')">Python</button>
+            <button class="vote-button" onclick="vote('Java')">Jav a</button>
+        </div>
+        <div class="results simple-results">
+            <div>JavaScript: <span id="js-votes">0</span></div>
+            <div>Python: <span id="python-votes">0</span></div>
+            <div>Java: <span id="java-votes">0</span></div>
+        </div>
+    </div>
+    <script src="prac1.js"></script>
+</body>
+</html>

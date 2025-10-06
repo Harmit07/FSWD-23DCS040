@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.welcome-text {
+  color: #666;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 95%;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+.logout, .activity-btn {
+  display: inline-block;
+  margin: 10px 5px;
+  background: #ff4b5c;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.activity-btn {
+  background: #2196F3;
+}
+
+.logout:hover {
+  background: #ff2e4d;
+}
+
+.activity-btn:hover {
+  background: #1976D2;
+}
+
+.session-info {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.session-info p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.active-session {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.actions {
+  margin: 20px 0;
+}
+
+.demo-credentials {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.demo-credentials h4 {
+  margin-top: 0;
+  color: #1976D2;
+}
+
+.demo-credentials p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #555;
+}
+
+#activity-log {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+#activity-log h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+#activity-content p {
+  margin: 8px 0;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  font-size: 12px;
+}

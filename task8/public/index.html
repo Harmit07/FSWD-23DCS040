@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gym Rep Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    #count {
+      font-size: 5em;
+      margin: 20px;
+    }
+
+    button {
+      font-size: 1.5em;
+      margin: 10px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Gym Rep Counter</h1>
+  <div id="count">0</div>
+
+  <button onclick="changeCount(1)">+ Rep</button>
+  <button onclick="changeCount(-1)">- Rep</button>
+  <button onclick="resetCount()">Reset</button>
+
+  <script>
+    
+    let count = parseInt(localStorage.getItem('repCount')) || 0;
+    const countDisplay = document.getElementById('count');
+    countDisplay.textContent = count;
+
+    function changeCount(amount) {
+      count = Math.max(0, count + amount);
+      countDisplay.textContent = count;
+      localStorage.setItem('repCount', count);
+    }
+
+    function resetCount() {
+      count = 0;
+      countDisplay.textContent = count;
+      localStorage.setItem('repCount', count);
+    }
+  </script>
+
+</body>
+</html>

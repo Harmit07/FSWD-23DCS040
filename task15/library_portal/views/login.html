@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Portal - Login</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📚 Library Portal Login</h2>
+    <p class="welcome-text">Welcome to the Library Management System</p>
+    <p class="welcome-text">✨ Use any email and password to login! ✨</p>
+    
+    <form method="POST" action="/login" id="loginForm">
+      <label>Email</label>
+      <input type="email" name="email" required placeholder="Enter any email">
+      
+      <label>Password</label>
+      <input type="password" name="password" required placeholder="Enter any password">
+      
+      <button type="submit">Login</button>
+    </form>
+    
+    <div class="demo-credentials">
+      <h4>Examples:</h4>
+      <p><strong>Email:</strong> test@example.com <strong>Password:</strong> 123</p>
+      <p><strong>Email:</strong> user@gmail.com <strong>Password:</strong> password</p>
+      <p><em>Any combination works!</em></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      const email = document.querySelector('input[name="email"]').value;
+      const password = document.querySelector('input[name="password"]').value;
+      
+      if (!email || !password) {
+        e.preventDefault();
+        alert('Please fill in all fields');
+      }
+    });
+  </script>
+</body>
+</html>
